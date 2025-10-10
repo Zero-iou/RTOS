@@ -1,0 +1,94 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : {},
+				"path" : "D:/Msys2/mingw64/bin/arm-none-eabi-gcc.exe",
+				"version" : ""
+			},
+			"language" : "ASM",
+			"sourceFileExtensions" : 
+			[
+				"s",
+				"S",
+				"asm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"D:/Msys2/mingw64/lib/gcc/arm-none-eabi/13.3.0/include",
+						"D:/Msys2/mingw64/lib/gcc/arm-none-eabi/13.3.0/include-fixed",
+						"D:/Msys2/mingw64/arm-none-eabi/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "D:/Msys2/mingw64/bin/arm-none-eabi-gcc.exe",
+				"version" : "13.3.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"D:/Msys2/mingw64/arm-none-eabi/include/c++/13.3.0",
+						"D:/Msys2/mingw64/arm-none-eabi/include/c++/13.3.0/arm-none-eabi/thumb/v7e-m+fp/hard",
+						"D:/Msys2/mingw64/arm-none-eabi/include/c++/13.3.0/backward",
+						"D:/Msys2/mingw64/lib/gcc/arm-none-eabi/13.3.0/include",
+						"D:/Msys2/mingw64/lib/gcc/arm-none-eabi/13.3.0/include-fixed",
+						"D:/Msys2/mingw64/arm-none-eabi/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "D:/Msys2/mingw64/bin/arm-none-eabi-g++.exe",
+				"version" : "13.3.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
