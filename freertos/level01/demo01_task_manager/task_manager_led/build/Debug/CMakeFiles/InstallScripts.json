@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/task_manager_led/build/Debug/cmake_install.cmake",
-		"E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/task_manager_led/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

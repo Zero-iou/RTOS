@@ -1,0 +1,67 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "configure task(Ninja)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S", "${workspaceFolder}/freertos/level01/demo01_task_manager/task_manager_led",
+                "-B", "${workspaceFolder}/freertos/level01/build/Debug",
+                "-G", "Ninja",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/freertos/level01/demo01_task_manager/task_manager_led/cmake/gcc-arm-none-eabi.cmake"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "build task(Ninja)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "${workspaceFolder}/freertos/level01/build/Debug",
+                "-j", "${env:NUMBER_OF_PROCESSORS}"
+            ],
+            "problemMatcher": "$gcc",
+            "dependsOn": ["configure task(Ninja)"],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "download dap",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "${workspaceFolder}/freertos/level01/openocd_dap.cfg",
+                "-c", "init",
+                "-c", "halt",
+                "-c", "program ${workspaceFolder}/freertos/level01/build/Debug/task_manager_led.hex verify",
+                "-c", "reset",
+                "-c", "shutdown"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "${env:PATH};C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\OpenOCD\\bin"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "dependsOn": ["build task(Ninja)"],
+            "dependsOrder": "sequence"
+        },
+        // {
+        //     "label": "log",
+        //     "type": "shell",
+        //     "command":"JlinkRTTClient",
+        //     "args": [],
+        //     "problemMatcher": [],
+        //     "dependsOn":[
+        //         "build task", // 可以添加多个.
+        //     ]
+        //     若使用daplink,则将log任务设置为依赖于jlink launch任务,保证jlink launch任务先于log任务执行
+        // }
+    ]
+}
