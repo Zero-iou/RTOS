@@ -1,4 +1,4 @@
-# Install script for directory: E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/task_manager_led/cmake/stm32cubemx
+# Install script for directory: E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

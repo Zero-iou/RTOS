@@ -235,8 +235,8 @@ CMAKE_STRIP:FILEPATH=D:/Msys2/mingw64/bin/arm-none-eabi-strip.exe
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=E:\Program-WorkSpace\rtos/freertos/level01/demo01_task_manager/task_manager_led/cmake/gcc-arm-none-eabi.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/cmake/gcc-arm-none-eabi.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -251,7 +251,7 @@ task_manager_led_BINARY_DIR:STATIC=E:/Program-WorkSpace/rtos/freertos/level01/bu
 task_manager_led_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-task_manager_led_SOURCE_DIR:STATIC=E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/task_manager_led
+task_manager_led_SOURCE_DIR:STATIC=E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager
 
 
 ########################
@@ -349,7 +349,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/task_manager_led
+CMAKE_HOME_DIRECTORY:INTERNAL=E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager
 //Name of CMakeLists files to read
 CMAKE_LIST_FILE_NAME:INTERNAL=CMakeLists.txt
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM

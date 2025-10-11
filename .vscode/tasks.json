@@ -7,11 +7,11 @@
             "type": "shell",
             "command": "cmake",
             "args": [
-                "-S", "${workspaceFolder}/freertos/level01/demo01_task_manager/task_manager_led",
+                "-S", "${workspaceFolder}/freertos/level01/${input:level01Example}",
                 "-B", "${workspaceFolder}/freertos/level01/build/Debug",
                 "-G", "Ninja",
                 "-DCMAKE_BUILD_TYPE=Debug",
-                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/freertos/level01/demo01_task_manager/task_manager_led/cmake/gcc-arm-none-eabi.cmake"
+                "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/freertos/level01/${input:level01Example}/cmake/gcc-arm-none-eabi.cmake"
             ],
             "problemMatcher": []
         },
@@ -35,7 +35,7 @@
                 "-f", "${workspaceFolder}/freertos/level01/openocd_dap.cfg",
                 "-c", "init",
                 "-c", "halt",
-                "-c", "program ${workspaceFolder}/freertos/level01/build/Debug/task_manager_led.hex verify",
+                "-c", "program ${workspaceFolder}/freertos/level01/build/Debug/${input:level01Example}.hex verify",
                 "-c", "reset",
                 "-c", "shutdown"
             ],
@@ -63,5 +63,17 @@
         //     ]
         //     若使用daplink,则将log任务设置为依赖于jlink launch任务,保证jlink launch任务先于log任务执行
         // }
+    ],
+    "inputs": [
+        {
+            "id": "level01Example",
+            "type": "pickString",
+            "description": "选择 Level01 示例目录",
+            "options": [
+                "demo01_task_manager",
+                "demo02_task_led_servo"
+            ],
+            "default": "demo01_task_manager"
+        }
     ]
 }

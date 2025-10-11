@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.26100")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/task_manager_led/cmake/gcc-arm-none-eabi.cmake")
+include("E:/Program-WorkSpace/rtos/freertos/level01/demo01_task_manager/cmake/gcc-arm-none-eabi.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")
